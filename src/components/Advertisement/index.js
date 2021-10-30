@@ -1,9 +1,3 @@
-/*
- ** Author: Santosh Kumar Dash
- ** Author URL: http://santoshdash.epizy.com/
- ** Github URL: https://github.com/quintuslabs/fashion-cube
- */
-
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
@@ -128,7 +122,7 @@ class Advertisement extends Component {
                   </li>
                 </ul>
                 <div className="red_button deal_ofthe_week_button">
-                  <a href="#">shop now</a>
+                  <a href="{void(0)}">shop now</a>
                 </div>
               </div>
             </div>

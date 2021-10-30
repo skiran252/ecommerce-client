@@ -1,13 +1,8 @@
-/*
- ** Author: Santosh Kumar Dash
- ** Author URL: http://santoshdash.epizy.com/
- ** Github URL: https://github.com/quintuslabs/fashion-cube
- */
 
 import React, { Component } from "react";
 import { Modal, Button } from "react-bootstrap";
 import "./style.css";
-import Auth from "../../modules/Auth";
+import Auth from "../../api/auth";
 import EmptyCart from "../../assets/images/emptyCart.png";
 import jumpTo from "../../modules/Navigation";
 class HomeCartView extends Component {
@@ -17,7 +12,7 @@ class HomeCartView extends Component {
   }
 
   goToChechout = () => {
-    jumpTo("/fashion-cube/cart");
+    jumpTo("/cart");
   };
   render() {
     const { items, totalPrice } = this.props.cart;

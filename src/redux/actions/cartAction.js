@@ -1,11 +1,5 @@
-/*
- ** Author: Santosh Kumar Dash
- ** Author URL: http://santoshdash.epizy.com/
- ** Github URL: https://github.com/quintuslabs/fashion-cube
- */
-
-import API from "../../axios/API";
-import Auth from "../../modules/Auth";
+import API from '../../api';
+import Auth from '../../api/auth';
 
 export const getCartByUserId = () => dispatch => {
   let userId = Auth.getUserId();

@@ -1,12 +1,6 @@
-/*
- ** Author: Santosh Kumar Dash
- ** Author URL: http://santoshdash.epizy.com/
- ** Github URL: https://github.com/quintuslabs/fashion-cube
- */
-
 import React, { Component } from "react";
 import LoginRegister from "../../components/LoginRegisterModal";
-import Auth from "../../modules/Auth";
+import Auth from "../../api/auth";
 
 class SingleProduct extends Component {
   constructor(props) {
@@ -122,13 +116,13 @@ class SingleProduct extends Component {
                       <a href="/">Home</a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="{void(0)}">
                         <i className="fa fa-angle-right" aria-hidden="true"></i>
                         {this.props.product.department}
                       </a>
                     </li>
                     <li className="active">
-                      <a href="#">
+                      <a href="{void(0)}">
                         <i className="fa fa-angle-right" aria-hidden="true"></i>
                         {this.props.product.category}
                       </a>
@@ -249,11 +243,11 @@ class SingleProduct extends Component {
                       className="red_button product-add_to_cart_button"
                       onClick={this.addToBag}
                     >
-                      <a href="#">add to cart</a>
+                      <a href="{void(0)}">add to cart</a>
                     </div>
 
                     {/* <div className="red_cart_button product_add_to_cart_icon">
-                      <a href="#">
+                      <a href="{void(0)}">
                         <i className="fas fa-cart-arrow-down"></i>
                       </a>
                     </div> */}

@@ -1,8 +1,4 @@
-/*
- ** Author: Santosh Kumar Dash
- ** Author URL: http://santoshdash.epizy.com/
- ** Github URL: https://github.com/quintuslabs/fashion-cube
- */
+
 
 import React from "react";
 
@@ -15,10 +11,10 @@ function Footer(props) {
             <div className="footer_nav_container d-flex flex-sm-row flex-column align-items-center justify-content-lg-start justify-content-center text-center">
               <ul className="footer_nav">
                 <li>
-                  <a href="#">Blog</a>
+                  <a href="{void(0)}">Blog</a>
                 </li>
                 <li>
-                  <a href="#">FAQs</a>
+                  <a href="{void(0)}">FAQs</a>
                 </li>
                 <li>
                   <a href="contact.html">Contact us</a>
@@ -30,23 +26,23 @@ function Footer(props) {
             <div className="footer_social d-flex flex-row align-items-center justify-content-lg-end justify-content-center">
               <ul>
                 <li>
-                  <a href="#">
+                  <a href="{void(0)}">
                     <i className="fab fa-facebook-f"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="{void(0)}">
                     <i className="fab fa-twitter"></i>{" "}
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="{void(0)}">
                     <i className="fab fa-instagram"></i>{" "}
                   </a>
                 </li>
 
                 <li>
-                  <a href="#">
+                  <a href="{void(0)}">
                     <i className="fab fa-pinterest-p"></i>{" "}
                   </a>
                 </li>

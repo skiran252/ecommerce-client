@@ -1,13 +1,8 @@
-/*
- ** Author: Santosh Kumar Dash
- ** Author URL: http://santoshdash.epizy.com/
- ** Github URL: https://github.com/quintuslabs/fashion-cube
- */
+import API from "../../api";
+import Auth from "../../api/auth";
 
 import React, { Component } from "react";
 import { login } from "../../ServerRequest";
-import API from "../../axios/API";
-import Auth from "../../modules/Auth";
 import HomeBanner from "../../components/HomeBanner";
 import CategoryBanner from "../../components/CategoryBanner/CategoryBanner";
 import NewArrivals from "../../components/Products/NewArrivals";
@@ -24,7 +19,7 @@ class Home extends Component {
     this.state = {
       data: null,
       modalShow: false,
-      login: true
+      login: true,
     };
     this.addToBag = this.addToBag.bind(this);
   }
@@ -46,14 +41,10 @@ class Home extends Component {
     this.setState({ modalShow: true, login: false });
   };
 
-  addToBag = params => {
-    if (
-      Auth.getUserDetails() !== undefined &&
-      Auth.getUserDetails() !== null &&
-      Auth.getToken() !== undefined
-    ) {
+  addToBag = (params) => {
+    if (Auth.getUserDetails() !== undefined && Auth.getUserDetails() !== null && Auth.getToken() !== undefined) {
       let cart = this.props.postCart(params);
-      cart.then(res => {
+      cart.then((res) => {
         console.log(res);
       });
     } else {
@@ -67,22 +58,10 @@ class Home extends Component {
       <div>
         <HomeBanner />
         <CategoryBanner />
-        {products ? (
-          <NewArrivals
-            products={products}
-            departments={departments}
-            addToBag={this.addToBag}
-          />
-        ) : null}
+        {products ? <NewArrivals products={products} departments={departments} addToBag={this.addToBag} /> : null}
         <Benefit />
         <Advertisement />
-        {products ? (
-          <BestSeller
-            products={products}
-            departments={departments}
-            addToBag={this.addToBag}
-          />
-        ) : null}
+        {products ? <BestSeller products={products} departments={departments} addToBag={this.addToBag} /> : null}
         <LoginRegister
           show={this.state.modalShow}
           login={this.state.login}

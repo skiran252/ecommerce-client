@@ -1,9 +1,3 @@
-/*
- ** Author: Santosh Kumar Dash
- ** Author URL: http://santoshdash.epizy.com/
- ** Github URL: https://github.com/quintuslabs/fashion-cube
- */
-
 import React, { Component } from "react";
 import {
   BrowserRouter as Router,
@@ -16,8 +10,7 @@ import { createBrowserHistory } from "history";
 import PageNotFound from "../views/PageNotFound";
 import HomeRoutes from "./HomeRoutes";
 import PrivateRoutes from "./PrivateRoutes";
-import Auth from "../modules/Auth";
-
+import Auth from "../api/auth";
 const PrivateRouter = ({ component, ...options }) => {
   const finalComponent =
     Auth.getUserDetails() !== undefined &&

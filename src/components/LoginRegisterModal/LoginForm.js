@@ -1,8 +1,4 @@
-/*
- ** Author: Santosh Kumar Dash
- ** Author URL: http://santoshdash.epizy.com/
- ** Github URL: https://github.com/quintuslabs/fashion-cube
- */
+
 
 import React, { Component } from "react";
 import { connect } from "react-redux";
@@ -89,7 +85,7 @@ class LoginForm extends Component {
           <span className="alert">Invalid Credentials</span>
           <a
             className="link"
-            href="#"
+            href="{void(0)}"
             onClick={this.props.forgotPasswordClicked}
           >
             Lost your password?

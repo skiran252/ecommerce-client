@@ -1,14 +1,8 @@
-/*
- ** Author: Santosh Kumar Dash
- ** Author URL: http://santoshdash.epizy.com/
- ** Github URL: https://github.com/quintuslabs/fashion-cube
- */
-
-import Auth from "../modules/Auth";
 import jumpTo from "../modules/Navigation";
+import Auth from "./auth";
 import axios from "axios";
 //const URL = "http://192.168.0.19:3000";
-const URL = "http://192.168.43.45:3000";
+const URL = "http://localhost:4362";
 
 const API = (config) => {
   //header authorization

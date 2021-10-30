@@ -1,8 +1,4 @@
-/*
- ** Author: Santosh Kumar Dash
- ** Author URL: http://santoshdash.epizy.com/
- ** Github URL: https://github.com/quintuslabs/fashion-cube
- */
+
 
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
@@ -42,7 +38,7 @@ class NavBar extends Component {
           <div className="row">
             <div className="col-lg-12 text-right">
               <div className="logo_container">
-                <Link to="/fashion-cube">
+                <Link to="/">
                   Fashion<span>Cube</span>
                 </Link>
               </div>
@@ -52,7 +48,7 @@ class NavBar extends Component {
                     <Link to="/home">home</Link>
                   </li>
                   <li className="mega-drop-down">
-                    <a href="#">
+                    <a href="{void(0)}">
                       shop <i className="fa fa-angle-down"></i>
                     </a>
 
@@ -68,7 +64,7 @@ class NavBar extends Component {
                                     return (
                                       <li key={idx}>
                                         <a
-                                          href={`/fashion-cube/shops/${item.departmentName}/${i}`}
+                                          href={`/shops/${item.departmentName}/${i}`}
                                         >
                                           {i}
                                         </a>

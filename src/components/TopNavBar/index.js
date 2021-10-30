@@ -1,13 +1,8 @@
-/*
- ** Author: Santosh Kumar Dash
- ** Author URL: http://santoshdash.epizy.com/
- ** Github URL: https://github.com/quintuslabs/fashion-cube
- */
 
 import React, { Component } from "react";
 import LoginRegister from "../LoginRegisterModal";
 
-import Auth from "../../modules/Auth";
+import Auth from "../../api/auth";
 
 class TopNavBar extends Component {
   constructor(props) {
@@ -47,42 +42,42 @@ class TopNavBar extends Component {
               <div className="top_nav_right">
                 <ul className="top_nav_menu">
                   <li className="currency">
-                    <a href="#">
+                    <a href="{void(0)}">
                       usd
                       <i className="fa fa-angle-down"></i>
                     </a>
                     <ul className="currency_selection">
                       <li>
-                        <a href="#">cad</a>
+                        <a href="{void(0)}">cad</a>
                       </li>
                       <li>
-                        <a href="#">aud</a>
+                        <a href="{void(0)}">aud</a>
                       </li>
                       <li>
-                        <a href="#">eur</a>
+                        <a href="{void(0)}">eur</a>
                       </li>
                       <li>
-                        <a href="#">gbp</a>
+                        <a href="{void(0)}">gbp</a>
                       </li>
                     </ul>
                   </li>
                   <li className="language">
-                    <a href="#">
+                    <a href="{void(0)}">
                       English
                       <i className="fa fa-angle-down"></i>
                     </a>
                     <ul className="language_selection">
                       <li>
-                        <a href="#">French</a>
+                        <a href="{void(0)}">French</a>
                       </li>
                       <li>
-                        <a href="#">Italian</a>
+                        <a href="{void(0)}">Italian</a>
                       </li>
                       <li>
-                        <a href="#">German</a>
+                        <a href="{void(0)}">German</a>
                       </li>
                       <li>
-                        <a href="#">Spanish</a>
+                        <a href="{void(0)}">Spanish</a>
                       </li>
                     </ul>
                   </li>
@@ -90,13 +85,13 @@ class TopNavBar extends Component {
                   Auth.getUserDetails() !== null &&
                   Auth.getToken() !== undefined ? (
                     <li className="account">
-                      <a href="#">
+                      <a href="{void(0)}">
                         {`Welcome ${Auth.getUserDetails().user_name}`}
                         <i className="fa fa-angle-down"></i>
                       </a>
                       <ul className="account_selection">
                         <li>
-                          <a href="#" onClick={() => this.logout()}>
+                          <a href="{void(0)}" onClick={() => this.logout()}>
                             <i
                               className="fas fa-sign-in-alt"
                               aria-hidden="true"
@@ -108,13 +103,13 @@ class TopNavBar extends Component {
                     </li>
                   ) : (
                     <li className="account">
-                      <a href="#">
+                      <a href="{void(0)}">
                         My Account
                         <i className="fa fa-angle-down"></i>
                       </a>
                       <ul className="account_selection">
                         <li>
-                          <a href="#" onClick={() => this.loginClicked()}>
+                          <a href="{void(0)}" onClick={() => this.loginClicked()}>
                             <i
                               className="fas fa-sign-in-alt"
                               aria-hidden="true"
@@ -123,7 +118,7 @@ class TopNavBar extends Component {
                           </a>
                         </li>
                         <li>
-                          <a href="#" onClick={() => this.registerClicked()}>
+                          <a href="{void(0)}" onClick={() => this.registerClicked()}>
                             <i
                               className="fa fa-user-plus"
                               aria-hidden="true"

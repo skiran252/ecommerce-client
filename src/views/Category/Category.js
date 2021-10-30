@@ -1,12 +1,6 @@
-/*
- ** Author: Santosh Kumar Dash
- ** Author URL: http://santoshdash.epizy.com/
- ** Github URL: https://github.com/quintuslabs/fashion-cube
- */
-
 import React, { Component } from "react";
 import SingleProduct from "../../components/Products/SingleProduct";
-import Auth from "../../modules/Auth";
+import Auth from "../../api/auth";
 import LoginRegister from "../../components/LoginRegisterModal";
 import Filter from "./components/Filter";
 
@@ -18,7 +12,7 @@ class Category extends Component {
       productsBAK: this.props.products,
       departments: this.props.departments,
       modalShow: false,
-      login: true
+      login: true,
     };
     this.addToBag = this.addToBag.bind(this);
   }
@@ -38,14 +32,10 @@ class Category extends Component {
     this.setState({ modalShow: true, login: false });
   };
 
-  addToBag = params => {
-    if (
-      Auth.getUserDetails() !== undefined &&
-      Auth.getUserDetails() !== null &&
-      Auth.getToken() !== undefined
-    ) {
+  addToBag = (params) => {
+    if (Auth.getUserDetails() !== undefined && Auth.getUserDetails() !== null && Auth.getToken() !== undefined) {
       let cart = this.props.postCart(params);
-      cart.then(res => {
+      cart.then((res) => {
         console.log(res);
       });
     } else {
@@ -72,7 +62,7 @@ class Category extends Component {
                   </a>
                 </li>
                 <li class="active">
-                  <a href="#">
+                  <a href="{void(0)}">
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                     {this.props.location.pathname.split("/")[3]}
                   </a>
@@ -93,22 +83,13 @@ class Category extends Component {
                           <span class="type_sorting_text">Default Sorting</span>
                           <i class="fa fa-angle-down"></i>
                           <ul class="sorting_type">
-                            <li
-                              class="type_sorting_btn"
-                              data-isotope-option='{ "sortBy": "original-order" }'
-                            >
+                            <li class="type_sorting_btn" data-isotope-option='{ "sortBy": "original-order" }'>
                               <span>Default Sorting</span>
                             </li>
-                            <li
-                              class="type_sorting_btn"
-                              data-isotope-option='{ "sortBy": "price" }'
-                            >
+                            <li class="type_sorting_btn" data-isotope-option='{ "sortBy": "price" }'>
                               <span>Price</span>
                             </li>
-                            <li
-                              class="type_sorting_btn"
-                              data-isotope-option='{ "sortBy": "name" }'
-                            >
+                            <li class="type_sorting_btn" data-isotope-option='{ "sortBy": "name" }'>
                               <span>Product Name</span>
                             </li>
                           </ul>
@@ -135,13 +116,13 @@ class Category extends Component {
                           <span>1</span>
                           <ul class="page_selection">
                             <li>
-                              <a href="#">1</a>
+                              <a href="{void(0)}">1</a>
                             </li>
                             <li>
-                              <a href="#">2</a>
+                              <a href="{void(0)}">2</a>
                             </li>
                             <li>
-                              <a href="#">3</a>
+                              <a href="{void(0)}">3</a>
                             </li>
                           </ul>
                         </div>
@@ -149,7 +130,7 @@ class Category extends Component {
                           <span>of</span> 3
                         </div>
                         <div id="next_page" class="page_next">
-                          <a href="#">
+                          <a href="{void(0)}">
                             <i class="fas fa-long-arrow-alt-right"></i>
                           </a>
                         </div>
@@ -162,15 +143,8 @@ class Category extends Component {
                   {products &&
                     products.slice(0, 8).map((item, index) => {
                       return (
-                        <div
-                          className="col-lg-3 col-sm-6"
-                          key={index}
-                          data-aos="zoom-in"
-                        >
-                          <SingleProduct
-                            productItem={item}
-                            addToBag={this.addToBag}
-                          />
+                        <div className="col-lg-3 col-sm-6" key={index} data-aos="zoom-in">
+                          <SingleProduct productItem={item} addToBag={this.addToBag} />
                         </div>
                       );
                     })}
@@ -203,13 +177,13 @@ class Category extends Component {
                       <span>1</span>
                       <ul class="page_selection">
                         <li>
-                          <a href="#">1</a>
+                          <a href="{void(0)}">1</a>
                         </li>
                         <li>
-                          <a href="#">2</a>
+                          <a href="{void(0)}">2</a>
                         </li>
                         <li>
-                          <a href="#">3</a>
+                          <a href="{void(0)}">3</a>
                         </li>
                       </ul>
                     </div>
@@ -217,11 +191,8 @@ class Category extends Component {
                       <span>of</span> 3
                     </div>
                     <div id="next_page_1" class="page_next">
-                      <a href="#">
-                        <i
-                          class="fas fa-long-arrow-right"
-                          aria-hidden="true"
-                        ></i>
+                      <a href="{void(0)}">
+                        <i class="fas fa-long-arrow-right" aria-hidden="true"></i>
                       </a>
                     </div>
                   </div>

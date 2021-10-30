@@ -1,11 +1,5 @@
-/*
- ** Author: Santosh Kumar Dash
- ** Author URL: http://santoshdash.epizy.com/
- ** Github URL: https://github.com/quintuslabs/fashion-cube
- */
-
 import React, { Component } from "react";
-import jumpTo from "../../modules/Navigation";
+// import jumpTo from "../../modules/Navigation";
 import Validator from "../../utils/Validator";
 import { DEFAULT_RULE, EMAIL_RULE } from "../../utils/Validator/rule";
 import PropTypes from "prop-types";
@@ -19,10 +13,10 @@ class RegisterForm extends Component {
     this.state = {
       name: "",
       email: "",
-      password: ""
+      password: "",
     };
   }
-  handleChange = e => {
+  handleChange = (e) => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
   };
@@ -44,12 +38,12 @@ class RegisterForm extends Component {
     this.setState({ loading: true });
     this.props
       .userRegister(name, email, password, password)
-      .then(res => {
+      .then((res) => {
         console.log(res);
         this.props.loginClicked();
         this.setState({ loading: false });
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error.response);
         this.setState({ loading: false });
       });
@@ -116,7 +110,7 @@ class RegisterForm extends Component {
               textAlign: "center",
               fontSize: 12,
               color: "#c4c4c4",
-              cursor: "pointer"
+              cursor: "pointer",
             }}
           >
             Already have an account ? Please login.
@@ -128,15 +122,15 @@ class RegisterForm extends Component {
 }
 
 RegisterForm.propTypes = {
-  loginClicked: PropTypes.func
+  loginClicked: PropTypes.func,
 };
 
 const mapDispatchToProps = {
-  userRegister
+  userRegister,
 };
-const mapStoreToProps = state => ({
+const mapStoreToProps = (state) => ({
   register_loading: state.register.register_loading,
-  register_error: state.register.error
+  register_error: state.register.error,
 });
 
 export default connect(mapStoreToProps, mapDispatchToProps)(RegisterForm);

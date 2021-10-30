@@ -1,8 +1,4 @@
-/*
- ** Author: Santosh Kumar Dash
- ** Author URL: http://santoshdash.epizy.com/
- ** Github URL: https://github.com/quintuslabs/fashion-cube
- */
+
 
 import React, { Component } from "react";
 
@@ -19,10 +15,10 @@ class Filter extends Component {
         </div>
         <ul class="sidebar_categories">
           <li>
-            <a href="#">Men</a>
+            <a href="{void(0)}">Men</a>
           </li>
           <li class="active">
-            <a href="#">
+            <a href="{void(0)}">
               <span>
                 <i class="fa fa-angle-double-right" aria-hidden="true"></i>
               </span>
@@ -30,16 +26,16 @@ class Filter extends Component {
             </a>
           </li>
           <li>
-            <a href="#">Accessories</a>
+            <a href="{void(0)}">Accessories</a>
           </li>
           <li>
-            <a href="#">New Arrivals</a>
+            <a href="{void(0)}">New Arrivals</a>
           </li>
           <li>
-            <a href="#">Collection</a>
+            <a href="{void(0)}">Collection</a>
           </li>
           <li>
-            <a href="#">Shop</a>
+            <a href="{void(0)}">Shop</a>
           </li>
         </ul>
       </div>

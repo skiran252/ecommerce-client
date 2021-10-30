@@ -1,8 +1,4 @@
-/*
- ** Author: Santosh Kumar Dash
- ** Author URL: http://santoshdash.epizy.com/
- ** Github URL: https://github.com/quintuslabs/fashion-cube
- */
+
 
 import React, { Component } from "react";
 import PropTypes from "prop-types";
@@ -25,58 +21,58 @@ class MobileMenu extends Component {
         <div className="hamburger_menu_content text-right">
           <ul className="menu_top_nav">
             <li className="menu_item has-children">
-              <a href="#">
+              <a href="{void(0)}">
                 usd
                 <i className="fa fa-angle-down"></i>
               </a>
               <ul className="menu_selection">
                 <li>
-                  <a href="#">cad</a>
+                  <a href="{void(0)}">cad</a>
                 </li>
                 <li>
-                  <a href="#">aud</a>
+                  <a href="{void(0)}">aud</a>
                 </li>
                 <li>
-                  <a href="#">eur</a>
+                  <a href="{void(0)}">eur</a>
                 </li>
                 <li>
-                  <a href="#">gbp</a>
+                  <a href="{void(0)}">gbp</a>
                 </li>
               </ul>
             </li>
             <li className="menu_item has-children">
-              <a href="#">
+              <a href="{void(0)}">
                 English
                 <i className="fa fa-angle-down"></i>
               </a>
               <ul className="menu_selection">
                 <li>
-                  <a href="#">French</a>
+                  <a href="{void(0)}">French</a>
                 </li>
                 <li>
-                  <a href="#">Italian</a>
+                  <a href="{void(0)}">Italian</a>
                 </li>
                 <li>
-                  <a href="#">German</a>
+                  <a href="{void(0)}">German</a>
                 </li>
                 <li>
-                  <a href="#">Spanish</a>
+                  <a href="{void(0)}">Spanish</a>
                 </li>
               </ul>
             </li>
             <li className="menu_item has-children">
-              <a href="#">
+              <a href="{void(0)}">
                 My Account
                 <i className="fa fa-angle-down"></i>
               </a>
               <ul className="menu_selection">
                 <li>
-                  <a href="#">
+                  <a href="{void(0)}">
                     <i className="fa fa-sign-in" aria-hidden="true"></i>Sign In
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="{void(0)}">
                     <i className="fa fa-user-plus" aria-hidden="true"></i>
                     Register
                   </a>
@@ -84,22 +80,22 @@ class MobileMenu extends Component {
               </ul>
             </li>
             <li className="menu_item">
-              <a href="#">home</a>
+              <a href="{void(0)}">home</a>
             </li>
             <li className="menu_item">
-              <a href="#">shop</a>
+              <a href="{void(0)}">shop</a>
             </li>
             <li className="menu_item">
-              <a href="#">promotion</a>
+              <a href="{void(0)}">promotion</a>
             </li>
             <li className="menu_item">
-              <a href="#">pages</a>
+              <a href="{void(0)}">pages</a>
             </li>
             <li className="menu_item">
-              <a href="#">blog</a>
+              <a href="{void(0)}">blog</a>
             </li>
             <li className="menu_item">
-              <a href="#">contact</a>
+              <a href="{void(0)}">contact</a>
             </li>
           </ul>
         </div>
